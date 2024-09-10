@@ -1,0 +1,73 @@
+{
+	"schemaVersion": "0.1.0",
+	"name": "Goodreads",
+	"behavior": "create",
+	"noteNameFormat": "{{selector:.BookPageTitleSection__title h1}}",
+	"path": "References",
+	"noteContentFormat": "",
+	"properties": [
+		{
+			"name": "title",
+			"value": "{{schema:name}}",
+			"type": "text"
+		},
+		{
+			"name": "author",
+			"value": "{{schema:author[*].name|wikilink}}",
+			"type": "multitext"
+		},
+		{
+			"name": "genre",
+			"value": "{{selector:.BookPageMetadataSection__genres .BookPageMetadataSection__genreButton|wikilink}}",
+			"type": "multitext"
+		},
+		{
+			"name": "length",
+			"value": "{{schema:numberOfPages}}",
+			"type": "number"
+		},
+		{
+			"name": "year",
+			"value": "{{selector:p[data-testid='publicationInfo']|split:\\\"First published \\\"|slice:1|date:\\\"YYYY\\\"}}",
+			"type": "number"
+		},
+		{
+			"name": "scoreGR",
+			"value": "{{schema:aggregateRating.ratingValue}}",
+			"type": "number"
+		},
+		{
+			"name": "rating",
+			"value": "",
+			"type": "number"
+		},
+		{
+			"name": "cover",
+			"value": "{{schema:image}}",
+			"type": "text"
+		},
+		{
+			"name": "isbn",
+			"value": "{{schema:isbn}}",
+			"type": "text"
+		},
+		{
+			"name": "language",
+			"value": "{{schema:inLanguage}}",
+			"type": "text"
+		},
+		{
+			"name": "created",
+			"value": "{{date}}",
+			"type": "date"
+		},
+		{
+			"name": "tags",
+			"value": "books, to-read",
+			"type": "multitext"
+		}
+	],
+	"triggers": [
+		"https://www.goodreads.com/book/"
+	]
+}

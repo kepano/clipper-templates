@@ -1,0 +1,78 @@
+{
+	"schemaVersion": "0.1.0",
+	"name": "Google Maps",
+	"behavior": "create",
+	"noteNameFormat": "{{selector:div[role=\"main\"]:aria-label}}",
+	"path": "References/",
+	"noteContentFormat": "",
+	"properties": [
+		{
+			"name": "category",
+			"value": "[[Places]]",
+			"type": "multitext"
+		},
+		{
+			"name": "type",
+			"value": "",
+			"type": "multitext"
+		},
+		{
+			"name": "source",
+			"value": "{{url}}",
+			"type": "text"
+		},
+		{
+			"name": "loc",
+			"value": "",
+			"type": "multitext"
+		},
+		{
+			"name": "location",
+			"value": "{{url|split:\\\"/@\\\"|slice:1|join|split:\\\",\\\"|slice:0,2}}",
+			"type": "multitext"
+		},
+		{
+			"name": "address",
+			"value": "{{selector:button[aria-label^=\\\"Address:\\\"]:aria-label|split:\\\"Address: \\\"|slice:1|join}}",
+			"type": "text"
+		},
+		{
+			"name": "url",
+			"value": "{{selector:div[aria-label^=\\\"Information for\\\"] a[href*=\\\"http\\\"]:href|slice:0,1|join}}",
+			"type": "text"
+		},
+		{
+			"name": "rating",
+			"value": "",
+			"type": "number"
+		},
+		{
+			"name": "scoreGoogle",
+			"value": "{{selector:div[jsaction*=\\\"moreReviews\\\"] .fontDisplayLarge}}",
+			"type": "number"
+		},
+		{
+			"name": "description",
+			"value": "{{selector:div[aria-label^=\\\"About \\\"] button .PYvSYb[jslog]}}",
+			"type": "text"
+		},
+		{
+			"name": "created",
+			"value": "{{date}}",
+			"type": "date"
+		},
+		{
+			"name": "last",
+			"value": "",
+			"type": "date"
+		},
+		{
+			"name": "tags",
+			"value": "places, to-visit",
+			"type": "multitext"
+		}
+	],
+	"triggers": [
+		"https://www.google.com/maps/place/"
+	]
+}

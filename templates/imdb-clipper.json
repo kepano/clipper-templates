@@ -1,0 +1,68 @@
+{
+	"schemaVersion": "0.1.0",
+	"name": "IMDB",
+	"behavior": "create",
+	"noteNameFormat": "{{schema:name}}",
+	"path": "References",
+	"noteContentFormat": "",
+	"properties": [
+		{
+			"name": "category",
+			"value": "[[Movies]]",
+			"type": "multitext"
+		},
+		{
+			"name": "genre",
+			"value": "{{schema:genre|wikilink}}",
+			"type": "multitext"
+		},
+		{
+			"name": "director",
+			"value": "{{schema:director[*].name|wikilink}}",
+			"type": "multitext"
+		},
+		{
+			"name": "rating",
+			"value": "",
+			"type": "number"
+		},
+		{
+			"name": "scoreImdb",
+			"value": "{{schema:aggregateRating.ratingValue}}",
+			"type": "number"
+		},
+		{
+			"name": "cast",
+			"value": "{{schema:actor[*].name|slice:0,5|wikilink}}",
+			"type": "multitext"
+		},
+		{
+			"name": "cover",
+			"value": "{{schema:image}}",
+			"type": "text"
+		},
+		{
+			"name": "plot",
+			"value": "{{schema:description}}",
+			"type": "text"
+		},
+		{
+			"name": "year",
+			"value": "{{schema:datePublished|split:\\\"-\\\"|slice:0,1}}",
+			"type": "number"
+		},
+		{
+			"name": "created",
+			"value": "{{date}}",
+			"type": "date"
+		},
+		{
+			"name": "tags",
+			"value": "movies, review, to-watch",
+			"type": "multitext"
+		}
+	],
+	"triggers": [
+		"/^https:\\/\\/www\\.imdb\\.com\\/title\\/tt\\d+\\/?$/"
+	]
+}

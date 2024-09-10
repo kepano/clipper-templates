@@ -1,0 +1,78 @@
+{
+	"schemaVersion": "0.1.0",
+	"name": "IMDB reference",
+	"behavior": "create",
+	"noteNameFormat": "{{meta:name:title|split:\" - IMDb\"|slice:0,1|join}}",
+	"path": "References",
+	"noteContentFormat": "",
+	"properties": [
+		{
+			"name": "category",
+			"value": "[[Movies]]",
+			"type": "multitext"
+		},
+		{
+			"name": "genre",
+			"value": "{{selector:.titlereference-header .ipl-inline-list__item a[href*='genre']|wikilink}}",
+			"type": "multitext"
+		},
+		{
+			"name": "imdbId",
+			"value": "",
+			"type": "text"
+		},
+		{
+			"name": "cover",
+			"value": "{{selector:.titlereference-primary-image:src}}",
+			"type": "text"
+		},
+		{
+			"name": "director",
+			"value": "",
+			"type": "multitext"
+		},
+		{
+			"name": "cast",
+			"value": "",
+			"type": "multitext"
+		},
+		{
+			"name": "length",
+			"value": "",
+			"type": "text"
+		},
+		{
+			"name": "year",
+			"value": "{{selector:h3 .titlereference-title-year}}",
+			"type": "number"
+		},
+		{
+			"name": "rating",
+			"value": "",
+			"type": "text"
+		},
+		{
+			"name": "scoreImdb",
+			"value": "{{selector:.ipl-rating-widget > .ipl-rating-star > .ipl-rating-star__rating}}",
+			"type": "number"
+		},
+		{
+			"name": "last",
+			"value": "",
+			"type": "date"
+		},
+		{
+			"name": "created",
+			"value": "{{date}}",
+			"type": "date"
+		},
+		{
+			"name": "tags",
+			"value": "movies, reviews, to-watch",
+			"type": "multitext"
+		}
+	],
+	"triggers": [
+		"/^https:\\/\\/www\\.imdb\\.com\\/title\\/tt\\d+\\/reference\\/?$/"
+	]
+}

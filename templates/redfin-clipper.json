@@ -1,0 +1,73 @@
+{
+	"schemaVersion": "0.1.0",
+	"name": "Redfin",
+	"behavior": "create",
+	"noteNameFormat": "{{meta:name:twitter:text:street_address}}, {{meta:name:twitter:text:city}}",
+	"path": "Clippings",
+	"noteContentFormat": "",
+	"properties": [
+		{
+			"name": "category",
+			"value": "[[Places]], [[Houses]]",
+			"type": "multitext"
+		},
+		{
+			"name": "url",
+			"value": "{{url}}",
+			"type": "text"
+		},
+		{
+			"name": "address",
+			"value": "{{meta:name:twitter:text:street_address}}, {{meta:name:geo.placename}}",
+			"type": "text"
+		},
+		{
+			"name": "loc",
+			"value": "{{meta:name:twitter:text:city|wikilink}}",
+			"type": "text"
+		},
+		{
+			"name": "year",
+			"value": "{{selector:.keyDetails-label:has(.wrench) ~ .keyDetails-value}}",
+			"type": "number"
+		},
+		{
+			"name": "price",
+			"value": "{{meta:name:twitter:text:price}}",
+			"type": "number"
+		},
+		{
+			"name": "sqft",
+			"value": "{{meta:name:twitter:text:sqft}}",
+			"type": "number"
+		},
+		{
+			"name": "lotsqft",
+			"value": "",
+			"type": "number"
+		},
+		{
+			"name": "location",
+			"value": "\\\"{{schema:[1].geo.latitude}}\\\",\\\"{{schema:[1].geo.longitude}}\\\"",
+			"type": "multitext"
+		},
+		{
+			"name": "visited",
+			"value": "",
+			"type": "checkbox"
+		},
+		{
+			"name": "created",
+			"value": "{{date}}",
+			"type": "date"
+		},
+		{
+			"name": "tags",
+			"value": "places, homes",
+			"type": "multitext"
+		}
+	],
+	"triggers": [
+		"https://www.redfin.com/"
+	]
+}

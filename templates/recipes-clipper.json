@@ -1,0 +1,63 @@
+{
+	"schemaVersion": "0.1.0",
+	"name": "Recipes",
+	"behavior": "create",
+	"noteNameFormat": "{{title}}",
+	"path": "References",
+	"noteContentFormat": "{{description}}\n\n## Nutrition\n\n## Ingredients\n\n{{schema:recipeIngredient|list:task}}\n\n## Instructions\n\n{{schema:recipeInstructions[*].text|list:task}}",
+	"properties": [
+		{
+			"name": "category",
+			"value": "[[Recipe]]",
+			"type": "multitext"
+		},
+		{
+			"name": "author",
+			"value": "{{schema:author.name|wikilink}}",
+			"type": "multitext"
+		},
+		{
+			"name": "title",
+			"value": "{{title}}",
+			"type": "text"
+		},
+		{
+			"name": "image",
+			"value": "{{image}}",
+			"type": "text"
+		},
+		{
+			"name": "rating",
+			"value": "",
+			"type": "number"
+		},
+		{
+			"name": "cuisine",
+			"value": "{{schema:recipeCuisine}}",
+			"type": "multitext"
+		},
+		{
+			"name": "url",
+			"value": "{{url}}",
+			"type": "text"
+		},
+		{
+			"name": "created",
+			"value": "{{date}}",
+			"type": "date"
+		},
+		{
+			"name": "publisher",
+			"value": "{{schema:publisher.name|wikilink}}",
+			"type": "text"
+		},
+		{
+			"name": "tags",
+			"value": "recipes",
+			"type": "multitext"
+		}
+	],
+	"triggers": [
+		"schema:@type=Recipe"
+	]
+}
