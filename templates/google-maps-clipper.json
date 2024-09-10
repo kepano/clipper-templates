@@ -3,7 +3,7 @@
 	"name": "Google Maps",
 	"behavior": "create",
 	"noteNameFormat": "{{selector:div[role=\"main\"]:aria-label}}",
-	"path": "References/",
+	"path": "References",
 	"noteContentFormat": "",
 	"properties": [
 		{
@@ -28,17 +28,17 @@
 		},
 		{
 			"name": "location",
-			"value": "{{url|split:\\\"/@\\\"|slice:1|join|split:\\\",\\\"|slice:0,2}}",
+			"value": "{{url|split:\\\"/@\\\"|slice:1|split:\\\",\\\"|slice:0,2}}",
 			"type": "multitext"
 		},
 		{
 			"name": "address",
-			"value": "{{selector:button[aria-label^=\\\"Address:\\\"]:aria-label|split:\\\"Address: \\\"|slice:1|join}}",
+			"value": "{{selector:button[aria-label^=\\\"Address:\\\"]:aria-label|split:\\\"Address: \\\"|slice:1}}",
 			"type": "text"
 		},
 		{
 			"name": "url",
-			"value": "{{selector:div[aria-label^=\\\"Information for\\\"] a[href*=\\\"http\\\"]:href|slice:0,1|join}}",
+			"value": "{{selector:div[aria-label^=\\\"Information for\\\"] a[href*=\\\"http\\\"]:href|slice:0,1}}",
 			"type": "text"
 		},
 		{

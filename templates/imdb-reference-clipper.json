@@ -2,7 +2,7 @@
 	"schemaVersion": "0.1.0",
 	"name": "IMDB reference",
 	"behavior": "create",
-	"noteNameFormat": "{{meta:name:title|split:\" - IMDb\"|slice:0,1|join}}",
+	"noteNameFormat": "{{meta:name:title|split:\" - IMDb\"|slice:0,1}}",
 	"path": "References",
 	"noteContentFormat": "",
 	"properties": [
