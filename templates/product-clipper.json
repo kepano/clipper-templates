@@ -1,0 +1,48 @@
+{
+	"schemaVersion": "0.1.0",
+	"name": "Product",
+	"behavior": "create",
+	"noteNameFormat": "{{title}}",
+	"path": "References",
+	"noteContentFormat": "{{description}}",
+	"properties": [
+		{
+			"name": "category",
+			"value": "[[Products]]",
+			"type": "text"
+		},
+		{
+			"name": "created",
+			"value": "{{date}}",
+			"type": "date"
+		},
+		{
+			"name": "description",
+			"value": "{{description}}",
+			"type": "text"
+		},
+		{
+			"name": "source",
+			"value": "{{url}}",
+			"type": "text"
+		},
+		{
+			"name": "title",
+			"value": "{{schema:@Product:name}}",
+			"type": "text"
+		},
+		{
+			"name": "price",
+			"value": "{{meta:property:product:price:amount}}",
+			"type": "number"
+		},
+		{
+			"name": "image",
+			"value": "{{image}}",
+			"type": "text"
+		}
+	],
+	"triggers": [
+		"schema:@Product"
+	]
+}

@@ -58,7 +58,7 @@
 		},
 		{
 			"name": "year",
-			"value": "{{schema:releasedEventstartDate|date:\\\"YYYY\\\"}}",
+			"value": "{{schema:releasedEvent[*].startDate|date:\\\"YYYY\\\"}}",
 			"type": "number"
 		},
 		{
