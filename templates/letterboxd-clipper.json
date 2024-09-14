@@ -13,12 +13,12 @@
 		},
 		{
 			"name": "genre",
-			"value": "{{schema:genre|wikilink}}",
+			"value": "{{schema:genre|wikilink|join}}",
 			"type": "multitext"
 		},
 		{
 			"name": "director",
-			"value": "{{schema:director[*].name|wikilink}}",
+			"value": "{{schema:director[*].name|wikilink|join}}",
 			"type": "multitext"
 		},
 		{
@@ -33,7 +33,7 @@
 		},
 		{
 			"name": "cast",
-			"value": "{{schema:actors[*].name|slice:0,5|wikilink}}",
+			"value": "{{schema:actors[*].name|slice:0,5|wikilink|join}}",
 			"type": "multitext"
 		},
 		{
@@ -52,8 +52,13 @@
 			"type": "date"
 		},
 		{
+			"name": "last",
+			"value": "",
+			"type": "date"
+		},
+		{
 			"name": "year",
-			"value": "{{schema:releasedEvent.startDate}}",
+			"value": "{{schema:releasedEventstartDate|date:\\\"YYYY\\\"}}",
 			"type": "number"
 		},
 		{

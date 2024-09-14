@@ -13,7 +13,7 @@
 		},
 		{
 			"name": "author",
-			"value": "{{schema:author.name|wikilink}}",
+			"value": "{{schema:author[*].name|wikilink|join}}",
 			"type": "multitext"
 		},
 		{
@@ -48,7 +48,7 @@
 		},
 		{
 			"name": "publisher",
-			"value": "{{schema:publisher.name|wikilink}}",
+			"value": "{{schema:publisher.name|wikilink|join}}",
 			"type": "text"
 		},
 		{
@@ -58,6 +58,6 @@
 		}
 	],
 	"triggers": [
-		"schema:@type=Recipe"
+		"schema:@Recipe"
 	]
 }

@@ -23,8 +23,8 @@
 		},
 		{
 			"name": "loc",
-			"value": "{{meta:name:twitter:text:city|wikilink}}",
-			"type": "text"
+			"value": "{{meta:name:twitter:text:city|wikilink|join}}",
+			"type": "multitext"
 		},
 		{
 			"name": "year",

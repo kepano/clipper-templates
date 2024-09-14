@@ -13,12 +13,12 @@
 		},
 		{
 			"name": "genre",
-			"value": "{{schema:genre|wikilink}}",
+			"value": "{{schema:genre|wikilink|join}}",
 			"type": "multitext"
 		},
 		{
 			"name": "director",
-			"value": "{{schema:director[*].name|wikilink}}",
+			"value": "{{schema:director[*].name|wikilink|join}}",
 			"type": "multitext"
 		},
 		{
@@ -33,7 +33,7 @@
 		},
 		{
 			"name": "cast",
-			"value": "{{schema:actor[*].name|slice:0,5|wikilink}}",
+			"value": "{{schema:actor[*].name|slice:0,5|wikilink|join}}",
 			"type": "multitext"
 		},
 		{
@@ -63,6 +63,6 @@
 		}
 	],
 	"triggers": [
-		"/^https:\\/\\/www\\.imdb\\.com\\/title\\/tt\\d+\\/?$/"
+		"/^https:\\/\\/www\\.imdb\\.com\\/title\\/tt\\d+(?!\\/reference\\/)(\\/[^\\s]*)?$/"
 	]
 }
