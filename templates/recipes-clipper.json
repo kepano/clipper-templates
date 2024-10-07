@@ -2,9 +2,7 @@
 	"schemaVersion": "0.1.0",
 	"name": "Recipes",
 	"behavior": "create",
-	"noteNameFormat": "{{title}}",
-	"path": "References",
-	"noteContentFormat": "{{description}}\n\n## Nutrition\n\n## Ingredients\n\n{{schema:recipeIngredient|list:task}}\n\n## Instructions\n\n{{schema:recipeInstructions[*].text|list:task}}",
+	"noteContentFormat": "{{description}}\n\n## Ingredients\n\n{{schema:recipeIngredient|list:task}}\n\n## Instructions\n\n{{schema:recipeInstructions[*].text|list:task}}\n\n## Nutrition\n\n{{schema:@Recipe:nutrition|uncamel|capitalize|table|replace:(\"@type\":\"Nutrient\",\"Nutrition information\":\"Quantity\")}}",
 	"properties": [
 		{
 			"name": "category",
@@ -39,7 +37,7 @@
 		{
 			"name": "url",
 			"value": "{{url}}",
-			"type": "text"
+			"type": "multitext"
 		},
 		{
 			"name": "created",
@@ -49,7 +47,7 @@
 		{
 			"name": "publisher",
 			"value": "{{schema:publisher.name|wikilink|join}}",
-			"type": "text"
+			"type": "multitext"
 		},
 		{
 			"name": "tags",
@@ -59,5 +57,7 @@
 	],
 	"triggers": [
 		"schema:@Recipe"
-	]
+	],
+	"noteNameFormat": "{{title}}",
+	"path": "References"
 }
