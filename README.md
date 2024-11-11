@@ -1,7 +1,16 @@
 Templates for [Obsidian Web Clipper](https://github.com/obsidianmd/obsidian-clipper). Works with the templates in [my Obsidian vault](https://github.com/kepano/kepano-obsidian).
 
-To install templates:
+To install templates, see instructions in the official [Obsidian Web Clipper documentation](https://help.obsidian.md/web-clipper/templates) repo.
 
-1. Open the extension then click the Settings cog icon
-2. Go to any template
-3. Drag and drop the template files into the Settings window
+## Templates
+
+Websites
+
+- [Arxiv](/templates/arxiv-clipper.json)
+- [Goodreads](/templates/goodreads-clipper.json)
+- [Google Maps](/templates/google-maps-clipper.json)
+- [IMDB](/templates/imdb-clipper.json)
+- [IMDB (reference pages)](/templates/imdb-reference-clipper.json)
+- [Redfin](/templates/redfin-clipper.json)
+- [Wikipedia](/templates/wikipedia-clipper.json)
+- [Youtube](/templates/youtube-clipper.json)
