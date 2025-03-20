@@ -1,0 +1,63 @@
+{
+    "schemaVersion": "0.1.0",
+    "name": "Anilist",
+    "behavior": "create",
+    "noteContentFormat": "{{schema:mainEntity.description}}",
+    "properties": [
+      {
+        "name": "title",
+        "value": "{{schema:mainEntity.name}}",
+        "type": "text"
+      },
+      {
+        "name": "studio",
+        "value": "{{schema:mainEntity.productionCompany[*].name|wikilink}}",
+        "type": "text"
+      },
+      {
+        "name": "genre",
+        "value": "{{schema:mainEntity.genre|wikilink}}",
+        "type": "multitext"
+      },
+      {
+        "name": "length",
+        "value": "{{schema:mainEntity.numberOfEpisodes}}",
+        "type": "number"
+      },
+      {
+        "name": "season",
+        "value": "{{selector:.data-set a.value}}",
+        "type": "text"
+      },
+      {
+        "name": "scoreGr",
+        "value": "{{schema:mainEntity.aggregateRating.ratingValue}}",
+        "type": "number"
+      },
+      {
+        "name": "rating",
+        "value": "",
+        "type": "number"
+      },
+      {
+        "name": "cover",
+        "value": "{{schema:mainEntity.image}}",
+        "type": "text"
+      },
+      {
+        "name": "created",
+        "value": "{{date}}",
+        "type": "date"
+      },
+      {
+        "name": "tags",
+        "value": "animes, to-watch",
+        "type": "multitext"
+      }
+    ],
+    "triggers": [
+      "https://anilist.co/anime/"
+    ],
+    "noteNameFormat": "{{selector:.content h1}}",
+    "path": "References"
+  }

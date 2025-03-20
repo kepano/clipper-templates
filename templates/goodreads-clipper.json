@@ -49,7 +49,7 @@
 		{
 			"name": "isbn",
 			"value": "{{schema:isbn}}",
-			"type": "text"
+			"type": "number"
 		},
 		{
 			"name": "language",
