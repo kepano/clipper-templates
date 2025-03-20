@@ -13,7 +13,7 @@
 		},
 		{
 			"name": "author",
-			"value": "{{selector:.ltx_authors .ltx_personname|wikilink|join}}",
+			"value": "{{selector:.authors||replace:\\\"Authors\\:\\\":\\\"\\\"}}",
 			"type": "multitext"
 		},
 		{
