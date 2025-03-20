@@ -1,0 +1,49 @@
+{
+	"schemaVersion": "0.1.0",
+	"name": "ChatGPT",
+	"behavior": "create",
+	"noteContentFormat": "{{selectorHtml:article[data-testid*=\"conversation-turn\"]|replace:\"/<svg.*?svg>/g\":\"### ChatGPT\\:\"|join:\"\\n\\n\"|markdown|replace:(\"\\\\###\":\"###\", \"##### You said\": \"### You:\")}}\n",
+	"properties": [
+		{
+			"name": "title",
+			"value": "{{title}}",
+			"type": "text"
+		},
+		{
+			"name": "source",
+			"value": "{{url}}",
+			"type": "text"
+		},
+		{
+			"name": "author",
+			"value": "{{author|split:\\\", \\\"|wikilink|join}}",
+			"type": "multitext"
+		},
+		{
+			"name": "published",
+			"value": "{{published}}",
+			"type": "date"
+		},
+		{
+			"name": "created",
+			"value": "{{date}}",
+			"type": "date"
+		},
+		{
+			"name": "description",
+			"value": "{{description}}",
+			"type": "text"
+		},
+		{
+			"name": "tags",
+			"value": "chatgpt/conversation",
+			"type": "multitext"
+		}
+	],
+	"triggers": [
+		"https://chatgpt.com/share",
+		"https://chatgpt.com/c"
+	],
+	"noteNameFormat": "{{title}}",
+	"path": "Clippings"
+}
