@@ -22,7 +22,7 @@
 			"type": "multitext"
 		},
 		{
-			"name": "length",
+			"name": "pages",
 			"value": "{{schema:numberOfPages}}",
 			"type": "number"
 		},

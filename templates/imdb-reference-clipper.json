@@ -37,9 +37,9 @@
 			"type": "multitext"
 		},
 		{
-			"name": "length",
+			"name": "runtime",
 			"value": "",
-			"type": "text"
+			"type": "number"
 		},
 		{
 			"name": "year",
