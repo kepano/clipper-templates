@@ -7,7 +7,7 @@
 	"noteContentFormat": "",
 	"properties": [
 		{
-			"name": "category",
+			"name": "categories",
 			"value": "[[Places]], [[Houses]]",
 			"type": "multitext"
 		},

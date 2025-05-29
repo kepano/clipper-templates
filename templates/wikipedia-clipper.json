@@ -5,7 +5,7 @@
 	"noteContentFormat": "{{selectorHtml:#mw-content-text|remove_html:(\".navbox,.printfooter,.side-box\")|markdown}}",
 	"properties": [
 		{
-			"name": "category",
+			"name": "categories",
 			"value": "[[Clippings]]",
 			"type": "multitext"
 		},
