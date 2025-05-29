@@ -5,7 +5,7 @@
 	"noteContentFormat": "{{description}}\n\n## Ingredients\n\n{{schema:recipeIngredient|list:task}}\n\n## Instructions\n\n{{schema:recipeInstructions[*].text|list:task}}\n\n## Nutrition\n\n{{schema:@Recipe:nutrition|uncamel|capitalize|table|replace:(\"@type\":\"Nutrient\",\"Nutrition information\":\"Quantity\")}}",
 	"properties": [
 		{
-			"name": "category",
+			"name": "categories",
 			"value": "[[Recipe]]",
 			"type": "multitext"
 		},
