@@ -6,7 +6,7 @@
 	"properties": [
 		{
 			"name": "title",
-			"value": "{{title}}",
+			"value": "{{selector:a[data-active] span}}",
 			"type": "text"
 		},
 		{
