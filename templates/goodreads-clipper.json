@@ -6,6 +6,11 @@
 	"path": "References",
 	"noteContentFormat": "{{selector:.BookPageMetadataSection__description}}",
 	"properties": [
+        {
+            "name": "categories",
+            "value": "[[Books]]",
+            "type": "multitext"
+        },
 		{
 			"name": "title",
 			"value": "{{schema:name}}",

@@ -9,7 +9,7 @@
 		{
 			"name": "categories",
 			"value": "[[Products]]",
-			"type": "text"
+			"type": "multitext"
 		},
 		{
 			"name": "created",
