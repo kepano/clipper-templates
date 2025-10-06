@@ -27,7 +27,7 @@
 			"type": "multitext"
 		},
 		{
-			"name": "location",
+			"name": "coordinates",
 			"value": "{{url|split:\\\"/@\\\"|slice:1|split:\\\",\\\"|slice:0,2}}",
 			"type": "multitext"
 		},
