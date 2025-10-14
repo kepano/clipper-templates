@@ -12,11 +12,6 @@
             "type": "multitext"
         },
 		{
-			"name": "categories",
-			"value": "[[Books]]",
-			"type": "multitext"
-		},
-		{
 			"name": "title",
 			"value": "{{selector:.BookPageTitleSection__title h1}}",
 			"type": "text"
