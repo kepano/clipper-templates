@@ -2,7 +2,7 @@
 	"schemaVersion": "0.1.0",
 	"name": "IMDB reference",
 	"behavior": "create",
-	"noteNameFormat": "{{meta:name:title|split:\" - IMDb\"|slice:0,1}}",
+	"noteNameFormat": "{{selector:.hero__primary-text}}",
 	"path": "References",
 	"noteContentFormat": "",
 	"properties": [
@@ -13,47 +13,47 @@
 		},
 		{
 			"name": "genre",
-			"value": "{{selector:.titlereference-header .ipl-inline-list__item a[href*='genre']|wikilink}}",
+			"value": "{{selector:.ipc-chip-list a[href*='genre']|wikilink|join}}",
 			"type": "multitext"
 		},
 		{
 			"name": "imdbId",
-			"value": "",
+			"value": "{{meta:property:imdb:pageConst}}",
 			"type": "text"
 		},
 		{
 			"name": "cover",
-			"value": "{{selector:.titlereference-primary-image:src}}",
+			"value": "{{image}}",
 			"type": "text"
 		},
 		{
 			"name": "director",
-			"value": "",
+			"value": "{{description|split:\\\"Directed by \\\"|slice:1|split:\\\". With\\\"|first|split:\\\", \\\"|wikilink|join}}",
 			"type": "multitext"
 		},
 		{
 			"name": "cast",
-			"value": "",
+			"value": "{{selector:.ipc-inline-list a[href*='name']|unique|wikilink|join}}",
 			"type": "multitext"
 		},
 		{
 			"name": "runtime",
-			"value": "",
+			"value": "{{selector:#runtime .ipc-metadata-list-item__list-content-item--subText|first}}",
 			"type": "number"
 		},
 		{
 			"name": "year",
-			"value": "{{selector:h3 .titlereference-title-year}}",
+			"value": "{{selector:.hero__primary-text-suffix|split:\\\"–\\\"|first}}",
 			"type": "number"
 		},
 		{
 			"name": "rating",
-			"value": "",
-			"type": "text"
+			"value": "{{selector:.ipc-rating-star--currentUser}}",
+			"type": "number"
 		},
 		{
 			"name": "scoreImdb",
-			"value": "{{selector:.ipl-rating-widget > .ipl-rating-star > .ipl-rating-star__rating}}",
+			"value": "{{selector:.ipc-rating-star--rating|first|round:1}}",
 			"type": "number"
 		},
 		{
