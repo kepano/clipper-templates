@@ -18,7 +18,7 @@
 		},
 		{
 			"name": "director",
-			"value": "{{schema:director[*].name|wikilink|join}}",
+			"value": "{{selector:[data-testid=\\\"title-pc-principal-credit\\\"]:first-child a|unique|wikilink|join}}",
 			"type": "multitext"
 		},
 		{
@@ -33,7 +33,7 @@
 		},
 		{
 			"name": "cast",
-			"value": "{{schema:actor[*].name|slice:0,5|wikilink|join}}",
+			"value": "{{selector:[data-testid=\\\"title-pc-principal-credit\\\"]:nth-child(3) div a|unique|wikilink|join}}",
 			"type": "multitext"
 		},
 		{
