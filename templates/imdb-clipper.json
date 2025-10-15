@@ -23,7 +23,7 @@
 		},
 		{
 			"name": "rating",
-			"value": "",
+			"value": "{{selector:[data-testid=\\\"hero-rating-bar__user-rating__score\\\"] span|unique}}",
 			"type": "number"
 		},
 		{
