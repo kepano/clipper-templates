@@ -12,6 +12,7 @@ Generic and schema-based templates
 Specific Websites
 
 - [Arxiv](/templates/arxiv-clipper.json)
+- [ChatGPT](/templates/chatgpt-clipper.json)
 - [Goodreads](/templates/goodreads-clipper.json)
 - [Google Maps](/templates/google-maps-clipper.json)
 - [IMDB](/templates/imdb-clipper.json) 
