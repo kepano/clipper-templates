@@ -17,7 +17,7 @@
 		{
 			"name": "source",
 			"value": "{{url}}",
-			"type": "multitext"
+			"type": "text"
 		},
 		{
 			"name": "author",
@@ -41,7 +41,7 @@
 		}
 	],
 	"triggers": [
-		"/^https:\\/\\/[a-z]{2,3}\\.wikipedia\\.org\\/wiki\\/?$/"
+		"/^https:\\/\\/[a-z-.]+\\.wikipedia\\.org\\/wiki\\/.*$/"
 	],
 	"noteNameFormat": "{{title}}",
 	"path": "Clippings"
