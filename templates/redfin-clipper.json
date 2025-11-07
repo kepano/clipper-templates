@@ -47,7 +47,7 @@
 			"type": "number"
 		},
 		{
-			"name": "location",
+			"name": "coordinates",
 			"value": "\\\"{{schema:[1].geo.latitude}}\\\",\\\"{{schema:[1].geo.longitude}}\\\"",
 			"type": "multitext"
 		},
