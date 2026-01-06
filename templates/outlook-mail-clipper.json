@@ -1,0 +1,45 @@
+{
+	"schemaVersion": "0.1.0",
+	"name": "Outlook Mail",
+	"behavior": "create",
+	"noteContentFormat": "# {{selector:div[role=\"main\"] span[title][class*=\"JdF\"], div[role=\"main\"] span[title]|first?title}}\n\n{{selectorHtml:div[role=\"document\"], [data-testid=\"message-body\"], [aria-label=\"Message body\"]|first|remove_tags:(\"table,td,tr,border\")|markdown}}",
+	"properties": [
+		{
+			"name": "url",
+			"value": "https://outlook.office.com/mail/deeplink/read/{{url|split:\\\"/mail/id/\\\"|last|split:\\\"/id/\\\"|last|split:\\\"?\\\"|first}}",
+			"type": "text"
+		},
+		{
+			"name": "time",
+			"value": "{{selector:div[data-testid=\\\"SentReceivedSavedTime\\\"]|first |date:\\\"YYYY-MM-DDTHH:mm\\\"}}",
+			"type": "datetime"
+		},
+		{
+			"name": "title",
+			"value": "{{selector:div[role=\\\"main\\\"] span[title][class*=\\\"JdF\\\"], div[role=\\\"main\\\"] span[title]|first?title}}",
+			"type": "text"
+		},
+		{
+			"name": "authors",
+			"value": "{{selector:div[role=\\\"main\\\"] [aria-label^=\\\"From\\\"], div[role=\\\"main\\\"] [aria-label*=\\\"From\\\"], div[role=\\\"main\\\"] [data-testid=\\\"message-from\\\"]|first |split:\\\"<\\\" |first |trim |title |wikilink}}",
+			"type": "text"
+		},
+		{
+			"name": "tags",
+			"value": "email,clippings",
+			"type": "multitext"
+		},
+		{
+			"name": "type",
+			"value": "Email",
+			"type": "text"
+		}
+	],
+	"triggers": [
+		"https://outlook.office.com/mail",
+		"https://outlook.live.com/mail",
+		"https://outlook.office365.com/mail"
+	],
+	"noteNameFormat": "{{selector:div[data-testid=\"SentReceivedSavedTime\"]|first |date:\"YYYY-MM-DD\"}} - Email - {{selector:div[role=\"main\"] span[title][class*=\"JdF\"], div[role=\"main\"] span[title]|first?title}}",
+	"path": "/"
+}
