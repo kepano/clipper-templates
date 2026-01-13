@@ -1,0 +1,88 @@
+{
+  "schemaVersion": "0.1.0",
+  "name": "Backloggd",
+  "behavior": "create",
+  "noteNameFormat": "{{title}}",
+  "path": "References",
+  "noteContentFormat": "{{content}}",
+  "properties": [
+    {
+      "name": "title",
+      "value": "{{title}}",
+      "type": "text"
+    },
+    {
+      "name": "categories",
+      "value": "[[Games]]",
+      "type": "multitext"
+    },
+    {
+      "name": "developer",
+      "value": "{{selector:a[href*='/developers/']:text}}",
+      "type": "multitext"
+    },
+    {
+      "name": "publisher",
+      "value": "{{selector:a[href*='/publishers/']:text}}",
+      "type": "text"
+    },
+    {
+      "name": "platform",
+      "value": "{{selector:.platforms a:text|join:\", \"}}",
+      "type": "multitext"
+    },
+    {
+      "name": "genre",
+      "value": "{{selector:a[href*='/genre/']:text|join:\", \"}}",
+      "type": "multitext"
+    },
+    {
+      "name": "year",
+      "value": "{{selector:.release-date:text|match:\"\\d{4}\"}}",
+      "type": "number"
+    },
+    {
+      "name": "status",
+      "value": "backlog",
+      "type": "text"
+    },
+    {
+      "name": "rating",
+      "value": "",
+      "type": "number"
+    },
+    {
+      "name": "playtime",
+      "value": "",
+      "type": "number"
+    },
+    {
+      "name": "completed",
+      "value": "",
+      "type": "date"
+    },
+    {
+      "name": "cover",
+      "value": "{{selector:.game-cover img:attr(src)}}",
+      "type": "text"
+    },
+    {
+      "name": "source",
+      "value": "{{url}}",
+      "type": "text"
+    },
+    {
+      "name": "created",
+      "value": "{{date}}",
+      "type": "date"
+    },
+    {
+      "name": "tags",
+      "value": "games",
+      "type": "multitext"
+    }
+  ],
+  "triggers": [
+    "backloggd.com/games/"
+  ]
+}
