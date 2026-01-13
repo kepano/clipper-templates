@@ -53,8 +53,8 @@
 		},
 		{
 			"name": "isbn",
-			"value": "{{schema:isbn}}",
-			"type": "number"
+			"value": "{{selector:.DescList|split:\\\"ISBN\\\"|slice:1,2|split:\\\" \\\"|first}}",
+			"type": "text"
 		},
 		{
 			"name": "language",
