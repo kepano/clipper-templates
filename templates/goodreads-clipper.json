@@ -33,7 +33,7 @@
 		},
 		{
 			"name": "year",
-			"value": "{{selector:p[data-testid='publicationInfo']|split:\\\"First published \\\"|slice:1|date:\\\"YYYY\\\"}}",
+			"value": "{{selector:p[data-testid='publicationInfo']|split:" "|last}}",
 			"type": "number"
 		},
 		{
