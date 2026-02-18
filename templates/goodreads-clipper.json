@@ -53,12 +53,12 @@
 		},
 		{
 			"name": "isbn",
-			"value": "{{selector:.DescList|split:\\\"ISBN\\\"|slice:1,2|split:\\\" \\\"|first}}",
+			"value": "{{schema:@Book:isbn}}",
 			"type": "text"
 		},
 		{
 			"name": "language",
-			"value": "{{selector:.DescList|split:\\\"Language\\\"|last}}",
+			"value": "{{schema:@Book:inLanguage}}",
 			"type": "text"
 		},
 		{
