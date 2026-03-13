@@ -6,7 +6,7 @@
 	"properties": [
 		{
 			"name": "categories",
-			"value": "[[Recipe]]",
+			"value": "[[Recipes]]",
 			"type": "multitext"
 		},
 		{
