@@ -2,7 +2,7 @@
 	"schemaVersion": "0.1.0",
 	"name": "Google Maps",
 	"behavior": "create",
-	"noteNameFormat": "{{selector:div[role=\"main\"]:aria-label}}",
+	"noteNameFormat": "{{selector:div[role=\"main\"]?aria-label}}",
 	"path": "References",
 	"noteContentFormat": "",
 	"properties": [
@@ -33,7 +33,7 @@
 		},
 		{
 			"name": "address",
-			"value": "{{selector:button[aria-label^=\\\"Address:\\\"]:aria-label|split:\\\"Address: \\\"|slice:1}}",
+			"value": "{{selector:button[aria-label^=\\\"Address:\\\"]?aria-label|split:\\\"Address: \\\"|slice:1}}",
 			"type": "text"
 		},
 		{
