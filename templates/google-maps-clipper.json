@@ -28,7 +28,7 @@
 		},
 		{
 			"name": "coordinates",
-			"value": "{{url|split:\\\"/@\\\"|slice:1|split:\\\",\\\"|slice:0,2}}",
+			"value": "{{url|split:"!3d"|slice:1,2|split:"!"|slice:0,2|join:""|split:"4d"|join:","}}",
 			"type": "multitext"
 		},
 		{
