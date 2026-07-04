@@ -1,0 +1,33 @@
+{
+	"schemaVersion": "0.1.0",
+	"name": "Docker Hub",
+	"behavior": "create",
+	"noteContentFormat": "{{content}}",
+	"properties": [
+		{
+			"name": "title",
+			"value": "{{title}}",
+			"type": "text"
+		},
+		{
+			"name": "source",
+			"value": "{{url}}",
+			"type": "text"
+		},
+		{
+			"name": "created",
+			"value": "{{date}}",
+			"type": "date"
+		},
+		{
+			"name": "tags",
+			"value": "docker, image, devops",
+			"type": "multitext"
+		}
+	],
+	"triggers": [
+		"https://hub.docker.com/"
+	],
+	"noteNameFormat": "{{title}}",
+	"path": "Clippings"
+}

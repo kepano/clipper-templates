@@ -1,0 +1,33 @@
+{
+	"schemaVersion": "0.1.0",
+	"name": "Hacker News",
+	"behavior": "create",
+	"noteContentFormat": "{{content}}",
+	"properties": [
+		{
+			"name": "title",
+			"value": "{{title}}",
+			"type": "text"
+		},
+		{
+			"name": "source",
+			"value": "{{url}}",
+			"type": "text"
+		},
+		{
+			"name": "created",
+			"value": "{{date}}",
+			"type": "date"
+		},
+		{
+			"name": "tags",
+			"value": "hackernews, tech",
+			"type": "multitext"
+		}
+	],
+	"triggers": [
+		"https://news.ycombinator.com/item"
+	],
+	"noteNameFormat": "{{title}}",
+	"path": "Clippings"
+}

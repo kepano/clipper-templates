@@ -1,0 +1,33 @@
+{
+	"schemaVersion": "0.1.0",
+	"name": "MDN Web Docs",
+	"behavior": "create",
+	"noteContentFormat": "{{content}}",
+	"properties": [
+		{
+			"name": "title",
+			"value": "{{title}}",
+			"type": "text"
+		},
+		{
+			"name": "source",
+			"value": "{{url}}",
+			"type": "text"
+		},
+		{
+			"name": "created",
+			"value": "{{date}}",
+			"type": "date"
+		},
+		{
+			"name": "tags",
+			"value": "mdn, webdev, documentation",
+			"type": "multitext"
+		}
+	],
+	"triggers": [
+		"https://developer.mozilla.org/"
+	],
+	"noteNameFormat": "{{title}}",
+	"path": "Clippings"
+}

@@ -1,0 +1,44 @@
+{
+	"schemaVersion": "0.1.0",
+	"name": "Twitter / X",
+	"behavior": "create",
+	"noteContentFormat": "{{content}}",
+	"properties": [
+		{
+			"name": "title",
+			"value": "{{title}}",
+			"type": "text"
+		},
+		{
+			"name": "source",
+			"value": "{{url}}",
+			"type": "text"
+		},
+		{
+			"name": "author",
+			"value": "{{author|split:\", \"|wikilink|join}}",
+			"type": "multitext"
+		},
+		{
+			"name": "published",
+			"value": "{{published}}",
+			"type": "date"
+		},
+		{
+			"name": "created",
+			"value": "{{date}}",
+			"type": "date"
+		},
+		{
+			"name": "tags",
+			"value": "twitter, social-media",
+			"type": "multitext"
+		}
+	],
+	"triggers": [
+		"https://x.com/",
+		"https://twitter.com/"
+	],
+	"noteNameFormat": "{{title}}",
+	"path": "Clippings"
+}

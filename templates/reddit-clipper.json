@@ -1,0 +1,43 @@
+{
+	"schemaVersion": "0.1.0",
+	"name": "Reddit",
+	"behavior": "create",
+	"noteContentFormat": "{{content}}",
+	"properties": [
+		{
+			"name": "title",
+			"value": "{{title}}",
+			"type": "text"
+		},
+		{
+			"name": "source",
+			"value": "{{url}}",
+			"type": "text"
+		},
+		{
+			"name": "author",
+			"value": "{{author|split:\", \"|wikilink|join}}",
+			"type": "multitext"
+		},
+		{
+			"name": "published",
+			"value": "{{published}}",
+			"type": "date"
+		},
+		{
+			"name": "created",
+			"value": "{{date}}",
+			"type": "date"
+		},
+		{
+			"name": "tags",
+			"value": "reddit",
+			"type": "multitext"
+		}
+	],
+	"triggers": [
+		"https://www.reddit.com/r/"
+	],
+	"noteNameFormat": "{{title}}",
+	"path": "Clippings"
+}

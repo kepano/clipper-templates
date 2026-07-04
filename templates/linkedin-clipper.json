@@ -1,0 +1,39 @@
+{
+	"schemaVersion": "0.1.0",
+	"name": "LinkedIn",
+	"behavior": "create",
+	"noteContentFormat": "{{content}}",
+	"properties": [
+		{
+			"name": "title",
+			"value": "{{title}}",
+			"type": "text"
+		},
+		{
+			"name": "source",
+			"value": "{{url}}",
+			"type": "text"
+		},
+		{
+			"name": "author",
+			"value": "{{author|split:\", \"|wikilink|join}}",
+			"type": "multitext"
+		},
+		{
+			"name": "created",
+			"value": "{{date}}",
+			"type": "date"
+		},
+		{
+			"name": "tags",
+			"value": "linkedin",
+			"type": "multitext"
+		}
+	],
+	"triggers": [
+		"https://www.linkedin.com/pulse/",
+		"https://www.linkedin.com/posts/"
+	],
+	"noteNameFormat": "{{title}}",
+	"path": "Clippings"
+}
